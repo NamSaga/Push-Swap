@@ -12,36 +12,22 @@
 
 #include <unistd.h>
 
-void	ft_swap(int	*a, int *b)
+typedef struct s_node {
+	int	data;
+	struct s_node* next;
+} t_node;
+
+void	sa(t_node* *head)
 {
-	int	tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-int main(int ac, char *av[])
-{
-	int	i = 0;
-	int	j;
-
-	if (ac != 2) 
-	{
-		while (av[1][i]) 
-		{
-			j = i + 1;
-			while (av[1][j]) 
-			{
-				if (av[1][i] > av[1][j]) 
-				{
-					ft_swap(&av[1][i], &av[1][j]);
-				}
-				j++;
-			}		
-			i++;
-		}
-		write(1, &av[1], i);
+	t_node* first = *head;
+	t_node* second = (*head)->next;
 	
+
+	if (head == NULL)
+		return;
+	if (first->data > second->data) {
+		first->next = second->next;
+		second->next = first;
+		*head = second;
 	}
 }

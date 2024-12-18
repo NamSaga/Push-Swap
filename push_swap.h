@@ -13,20 +13,21 @@ xz/* ************************************************************************** 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdbool.h>
-#include <limits.h>
-#include <../libft/libft.h>
-#include <../printf/ft_printf.h>
+
+# include <stdbool.h>
+# include "libft/libft.h"
+# include "printf/ft_printf.h"
 
 typedef struct	s_stack_node
 {
-	int	nb;
+	int	data;
 	int	pos;
-	int	push;
+	int	push_cost;
 	bool	mid;
 	bool	low;
-	struct s_stack_node	*target;
+	struct s_stack_node	*target_node;
 	struct s_stack_node	*next;
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
+#endif
