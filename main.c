@@ -6,12 +6,12 @@
 /*   By: rmamisoa@student.42antananarivo            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:03:56 by rmamisoa          #+#    #+#             */
-/*   Updated: 2024/08/02 13:50:24 by rmamisoa         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:46:12 by rmamisoa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
+
 int main(int ac, char *av[])
 {
 	t_stack_node	*a;

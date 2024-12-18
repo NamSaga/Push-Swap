@@ -6,13 +6,33 @@
 /*   By: rmamisoa <rmamisoa@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:01:17 by rmamisoa          #+#    #+#             */
-/*   Updated: 2024/12/16 14:47:41 by rmamisoa         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:45:49 by rmamisoa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stddef.h>
-#include <stdlib.h>
+
+static long	ft_atol(const char *s)
+{
+	int	i;
+	long res;
+	int	sign;
+
+	i = 0;
+	res = 0;
+	sign = 1;
+	while (s[i] == 32 || (s[i] >= 9 && s[i] <= 13))
+		i++;
+	while (s[i] == '-' || s[i] == '+')
+	{
+		if (s[i] == '-')
+			sign -= 1;
+		i++;
+	}
+	while (ft_isdigit(s[i]))
+		res = res * 10 + (s[i++] - 48);
+	return (res * sign);
+}
 
 static void	append_node(t_stack_node **stack, int n)
 {

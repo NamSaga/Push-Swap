@@ -6,13 +6,11 @@
 /*   By: rmamisoa <rmamisoa@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 14:27:21 by rmamisoa          #+#    #+#             */
-/*   Updated: 2024/12/16 14:48:27 by rmamisoa         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:45:40 by rmamisoa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <limits.h>
-#include <stdbool.h>
 
 bool	stack_sorted(t_stack_node *stack)
 {
@@ -46,18 +44,4 @@ t_stack_node	*find_min(t_stack_node *stack)
 	}
 	return (min_node);
 }
-
-void	sort_three(t_stack_node **a)
-{
-	t_stack_node	*bn;
-	
-	bn = find_max(*a);
-	if (bn == *a)
-	 ra(a, false);
-	else if ((*a)->next->data)
-			rra(a, false);
-	if ((*a)->data > (*a)->next->data)
-		sa(a, false);
-}
-
 
